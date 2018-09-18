@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Technical Documentation Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	<main id="main-doc">
+		<nav id="navbar">
+			<header><h1>Python 3.7</h1></header>
+			<i class="fas fa-bars" id="bars"></i>
+			<a href="#introduction" class="nav-link">Introduction</a>
+			<a href="#hello_world" class="nav-link">Hello World</a>
+			<a href="#variables" class="nav-link">Variables</a>
+			<a href="#data_types" class="nav-link">Data Types</a>
+			<a href="#flow_controls" class="nav-link">Flow Controls</a>
+		</nav>
+		<div>
+			<section class="main-section" id="introduction">
+				<header><h3>Introduction</h3></header>
+				<p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.</p>
+
+				<p>The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, https://www.python.org/, and may be freely distributed.</p>
+
+				<p>This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library.</p>
+
+				<p>A quick recap of python's features:</p>
+				<ul>
+					<li>Easy to learn</li>
+					<li>Interpreted language</li>
+					<li>Free and open source</li>
+					<li>Extensible</li>
+					<li>Object oriented language</li>
+				</ul>
+			</section>
+			<hr>
+			<section class="main-section" id="hello_world">
+				<header><h3>Hello World</h3></header>
+				<p>As with every programming language, we will beging with the standard "Hello, world!" program.  For python, this is an extremely easy task and it demonstrates python's "easy to use" feature.</p>
+				<p>After downloading python and the integrated development environment IDLE, simply type "idle" and this will invoke our development environment.  You will be presented with a prompt that looks like this:</p>
+				<code>
+					Python 3.6.5 (default, Apr  1 2018, 05:46:30) 
+					[GCC 7.3.0] on linux
+					Type "copyright", "credits" or "license()" for more information.
+					>>> 
+				</code>
+				
+				<p>Then to create our hello world program, click 'File,' then 'New File,' and you will be presented with a blank page.  In that file type the following:</p>
+				<code>
+					print('Hello, World!')
+				</code>
+				
+				<p>Save it, select 'Run' from the menu, and then 'Run Module,' and voila! Displayed on the python shell is:</p>
+				<code>
+					>>> 
+					============ RESTART: /home/darkhorse2k5/Documents/hello_world.py ============
+					Hello, World!
+					>>> 
+				</code>
+				
+				<p>Congratulations!  You just wrote a computer program! How easy was that?  Very easy, or at least I hope so.  That program was just the tip of the iceberg when it comes to python.  We will continue to dive deeper and explore python's features.</p>
+			</section>
+			<hr>
+			<section class="main-section" id="variables">
+				<header><h3>Variables</h3></header>
+				<p>Unlike other programming languages, Python has no command for declaring a variable.  A variable is created the moment you first assign a value to it.</p>
+				<code>
+					x = 5
+					y = "John"
+					print(x)
+					print(y)
+				</code>
+				
+				<p>Variables do not need to be declared with any particular type and can even change type after they have been set.</p>
+				<code>
+					x = 4 # x is of type int
+					x = "Sally" # x is now of type str
+					print(x)
+				</code>
+				
+				<p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:</p>
+				<ul>
+					<li>A variable name must start with a letter or the underscore character</li>
+					<li>A variable name cannot start with a number</li>
+					<li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+					<li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+					<p>Remember that variables are case-sensitive</p>
+				</ul>
+			</section>
+			<hr>
+			<section class="main-section" id="data_types">
+				<header><h3>Data Types</h3></header>
+				<p>The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages (for example, Pascal or C); parentheses (()) can be used for grouping. For example:</p>
+				<code>
+					>>> 2 + 2
+					4
+					>>> 50 - 5*6
+					20
+					>>> (50 - 5*6) / 4
+					5.0
+					>>> 8 / 5  # division always returns a floating point number
+					1.6
+				</code>
+			
+				<p>The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float.</p>
+				<p>The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive prompt:</p>
+				<code>
+					>>> width = 20
+					>>> height = 5 * 9
+					>>> width * height
+					900
+				</code>
+				
+				<p>Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes ('...') or double quotes ("...") with the same result [2]. \ can be used to escape quotes:</p>
+				<code>
+					>>> 'spam eggs'  # single quotes
+					'spam eggs'
+					>>> 'doesn\'t'  # use \' to escape the single quote...
+					"doesn't"
+					>>> "doesn't"  # ...or use double quotes instead
+					"doesn't"
+					>>> '"Yes," they said.'
+					'"Yes," they said.'
+					>>> "\"Yes,\" they said."
+					'"Yes," they said.'
+					>>> '"Isn\'t," they said.'
+					'"Isn\'t," they said.'
+				</code>
+				
+				<p>In the interactive interpreter, the output string is enclosed in quotes and special characters are escaped with backslashes. While this might sometimes look different from the input (the enclosing quotes could change), the two strings are equivalent. The string is enclosed in double quotes if the string contains a single quote and no double quotes, otherwise it is enclosed in single quotes.</p>
+				<p>Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:</p>
+				<code>
+					>>> word = 'Python'
+					>>> word[0]  # character in position 0
+					'P'
+					>>> word[5]  # character in position 5
+					'n'
+				</code>
+				
+				<p>Python knows a number of compound data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.</p>
+				<code>
+					>>> squares = [1, 4, 9, 16, 25]
+					>>> squares
+					[1, 4, 9, 16, 25]
+				</code>
+				
+			</section>
+			<hr>
+			<section class="main-section" id="flow_controls">
+				<header><h3>Flow Controls</h3></header>
+				<p>Python knows the usual control flow statements known from other languages, with some twists.  Perhaps the most well-known statement type is the if statement. For example:</p>
+				<code>
+					>>> x = int(input("Please enter an integer: "))
+					Please enter an integer: 42
+					>>> if x < 0:
+					...     x = 0
+					...     print('Negative changed to zero')
+					... elif x == 0:
+					...     print('Zero')
+					... elif x == 1:
+					...     print('Single')
+					... else:
+					...     print('More')
+					...
+					More
+				</code>
+				
+				<p>There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.</p>
+				<p>The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):</p>
+				<code>
+					>>> # Measure some strings:
+					... words = ['cat', 'window', 'defenestrate']
+					>>> for w in words:
+					...     print(w, len(w))
+					...
+					cat 3
+					window 6
+					defenestrate 12
+				</code>
+				
+				<p>If you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. It generates arithmetic progressions:</p>
+				<code>
+					>>> for i in range(5):
+					...     print(i)
+					...
+					0
+					1
+					2
+					3
+					4
+				</code>
+				
+				<p>The given end point is never part of the generated sequence; range(10) generates 10 values, the legal indices for items of a sequence of length 10.</p>
+				<p>With the while loop we can execute a set of statements as long as a condition is true.  For example, the following code prints i as long as i is less than 6:</p>
+				<code>
+					i = 1
+					while i < 6:
+					  print(i)
+					  i += 1
+				</code>
+				
+				<p>With the break statement we can stop the loop even if the while condition is true:</p>
+				<code>
+					i = 1
+					while i < 6:
+					  print(i)
+					  if i == 3:       #if i is equal to 3
+					    break          #exit the loop
+					  i += 1
+				</code>
+				<br>
+				<strong><p>The above text came from the <a id="python" href="https://www.python.org/">python</a> website, and it is definitely not all inclusive, I simply grabbed documentation here and there from their site.  Any of the add lib text was from me.</p><strong></strong>
+			</section>
+		</div>
+	</main>
+</body>
+</html>
